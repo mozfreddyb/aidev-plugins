@@ -10,6 +10,14 @@ As other agents (e.g., Codex) add marketplace support, plugins here will be exte
 
 If you have a plugin that you think would be useful for Mozilla developers, please feel free to open a PR to add it here.
 
+## Installation
+
+From Claude Code, type:
+
+```
+/plugin marketplace add mozilla/aidev-plugins
+```
+
 ## Structure
 
 Plugins are organized in the `plugins/` directory, with each plugin in its own subdirectory. Each plugin must also be listed in `.claude-plugin/marketplace.json` to be discoverable.
