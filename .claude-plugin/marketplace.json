@@ -1,0 +1,9 @@
+{
+  "name": "aidev-plugins",
+  "description": "Mozilla's marketplace for AI Dev plugins and skills",
+  "owner": {
+    "name": "AI for Development",
+    "email": "ai4dev@mozilla.com"
+  },
+  "plugins": []
+}
