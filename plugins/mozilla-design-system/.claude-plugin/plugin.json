@@ -1,0 +1,9 @@
+{
+  "name": "mozilla-design-system",
+  "description": "Make HTML that Claude generates (reports, dashboards, prototypes, one-pagers) follow Mozilla's Acorn design system and brand: Firefox design tokens, component patterns, icons, and content guidelines.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Frederik Braun",
+    "email": "fbraun@mozilla.com"
+  }
+}

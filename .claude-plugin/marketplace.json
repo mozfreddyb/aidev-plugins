@@ -5,5 +5,11 @@
     "name": "AI for Development",
     "email": "ai4dev@mozilla.com"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "mozilla-design-system",
+      "source": "./plugins/mozilla-design-system",
+      "description": "Make generated HTML (reports, dashboards, prototypes, one-pagers) follow Mozilla's Acorn design system and brand."
+    }
+  ]
 }

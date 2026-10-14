@@ -18,6 +18,12 @@ From Claude Code, type:
 /plugin marketplace add mozilla/aidev-plugins
 ```
 
+## Plugins
+
+| Plugin | Description |
+|---|---|
+| [mozilla-design-system](plugins/mozilla-design-system) | Make generated HTML (reports, dashboards, prototypes, one-pagers) follow Mozilla's Acorn design system and the Firefox and Mozilla brands. |
+
 ## Structure
 
 Plugins are organized in the `plugins/` directory, with each plugin in its own subdirectory. Each plugin must also be listed in `.claude-plugin/marketplace.json` to be discoverable.

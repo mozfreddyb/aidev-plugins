@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Brand: omit data-brand for the Firefox product (Acorn) look, or set
+     data-brand="firefox" / data-brand="mozilla". Optional:
+     data-color-scheme="light" | "dark" to pin the scheme. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page title in sentence case</title>
+  <!-- Resolved from the skill's assets/ and inlined by scripts/bundle.py. -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
+  <!-- Brand pages only (data-brand set): Mozilla Headline and Mozilla Text.
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wdth,wght@75..100,200..700&family=Mozilla+Text:wght@200..700&display=swap">
+  -->
+  <style>
+    /* Page-specific CSS. Use tokens (var(--space-large), var(--text-color),
+       ...) rather than literal colors and sizes. Unlayered, so it wins over
+       the design system layers. */
+  </style>
+</head>
+<body>
+  <!-- Brand pages put <header class="moz-masthead"> and <section class="moz-hero">
+       (with the page's h1) before <main> instead of the page header below;
+       see examples/one-pager.html and examples/mozilla-brief.html.
+       Dashboards: <main class="moz-main wide">, optionally inside
+       <div class="moz-page"> with a <nav class="moz-page-nav">. -->
+  <main class="moz-main">
+    <header class="moz-page-header">
+      <div class="heading">
+        <h1>Page title in sentence case</h1>
+      </div>
+      <p class="description">One sentence on what this page is for.</p>
+    </header>
+
+    <section class="moz-section" aria-labelledby="first-section">
+      <h2 id="first-section">First section</h2>
+      <p>Content.</p>
+    </section>
+  </main>
+</body>
+</html>
