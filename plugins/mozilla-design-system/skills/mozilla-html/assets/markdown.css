@@ -1,0 +1,44 @@
+/* Markdown document layout; colors, typography and spacing come from Acorn tokens. */
+.markdown-nav { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; }
+.markdown-nav .label { white-space: normal; }
+.markdown-nav .moz-page-nav-button { height: auto; }
+.markdown-content { overflow-wrap: anywhere; }
+.markdown-content .level2 { margin-block: var(--space-xxlarge); }
+.markdown-content h2 { padding-block-end: var(--space-medium); border-block-end: var(--border-width) solid var(--border-color-deemphasized); }
+.markdown-content h3 { margin-block: var(--space-xxlarge) var(--space-medium); }
+.markdown-content p, .markdown-content li { line-height: var(--line-height-body); }
+.markdown-content pre { overflow-x: auto; }
+.markdown-content pre code { white-space: pre; }
+.markdown-content .moz-table-wrapper { margin-block: var(--space-xlarge); }
+.markdown-content .moz-table { font-size: var(--font-size-small); }
+.markdown-content .moz-chart { margin-inline: 0; padding: var(--space-large); background: var(--background-color-box); border: var(--border-width) solid var(--border-color-deemphasized); border-radius: var(--border-radius-medium); }
+.markdown-content .chart-scroll { overflow-x: auto; }
+.markdown-content .chart-scroll svg { display: block; width: 100%; min-width: var(--page-main-content-width); height: auto; }
+.markdown-content .moz-chart figcaption { margin-block-start: var(--space-medium); color: var(--text-color-deemphasized); font-size: var(--font-size-small); }
+.markdown-content .moz-chart svg text { fill: var(--text-color); }
+.markdown-content img { max-width: 100%; height: auto; }
+.markdown-image svg { max-width: 100%; height: auto; vertical-align: middle; }
+.markdown-toc { margin-block-end: var(--space-xxlarge); }
+.markdown-toc .heading { display: flex; align-items: center; gap: var(--space-small); font-weight: var(--font-weight-semibold); }
+.markdown-toc .group { display: flex; flex-wrap: wrap; gap: var(--space-small) var(--space-large); }
+.markdown-toc .moz-page-nav-button { padding: var(--space-xsmall) 0; min-height: 0; }
+.markdown-hero { border-radius: var(--border-radius-medium); }
+.markdown-hero h1 { margin: 0; }
+.markdown-header { display: flex; flex-wrap: wrap; gap: var(--space-large); align-items: start; justify-content: space-between; }
+.markdown-header .heading { flex: 1; }
+.skip-link { position: absolute; inset-inline-start: var(--space-large); top: var(--space-large); translate: 0 -200%; }
+.skip-link:focus { translate: 0; }
+@media (max-width: 720px) {
+  .markdown-nav { position: static; max-height: none; width: 100%; }
+  .markdown-nav .label { display: inline; }
+  .markdown-nav .group { display: flex; flex-wrap: wrap; }
+  .markdown-nav .moz-page-nav-button { width: auto; }
+}
+@media print {
+  .markdown-header button, .skip-link, .markdown-toc { display: none; }
+  .markdown-content .chart-scroll { overflow: visible; }
+  .markdown-content .chart-scroll svg { min-width: 0; }
+  .markdown-content .moz-table-wrapper { overflow: visible; }
+  .markdown-content h2, .markdown-content h3 { break-after: avoid; }
+  .markdown-content figure, .markdown-content tr { break-inside: avoid; }
+}

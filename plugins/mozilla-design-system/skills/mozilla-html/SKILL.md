@@ -6,7 +6,8 @@ description: >
   Nova look) by default, or the Firefox or Mozilla brand for
   communication pieces. Use whenever you create or restyle an HTML page,
   report, dashboard, status page, prototype, mockup, internal tool,
-  one-pager, launch page, or HTML artifact for Mozilla or Firefox, or when
+  one-pager, launch page, or HTML artifact for Mozilla or Firefox, render
+  an existing Markdown document in those styles, or when
   asked to use Acorn, Firefox styles, design tokens, moz-* components, or
   Mozilla branding. Provides Firefox's design tokens, ported components,
   Acorn icons, official logos, a bundler that makes a single portable file,
@@ -37,6 +38,21 @@ brand look, read `references/brand-firefox.md` or
 `references/brand-mozilla.md` first, and load the fonts as shown there.
 
 ## 2. Build the page
+
+For an existing Markdown document, preserve its prose and data and use
+`scripts/render_markdown.py` instead of composing the page from scratch:
+
+```sh
+python3 -I scripts/render_markdown.py report.md -o report.html
+python3 -I scripts/render_markdown.py report.md --theme mozilla --layout reading -o report.html
+```
+
+This path requires Pandoc in PATH in addition to Python 3. It applies the
+chosen theme, embeds local images, bundles the result, and runs the checker.
+Read [references/markdown.md](references/markdown.md) for layout, navigation,
+table and scheme options, supported content, and a comparison demo. Review
+checker warnings without rewriting the source unless editing was requested.
+For newly composed HTML, continue with the recipes below.
 
 1. Copy `assets/template.html` to a source file next to the output, such
    as `report.src.html`. Keep its two stylesheet links (`tokens.css`,

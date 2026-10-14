@@ -59,15 +59,33 @@ skills/mozilla-html/
 │   └── logos/               # official Firefox and Mozilla logos
 ├── references/              # loaded on demand: components, tokens, content,
 │                            # charts, brand-firefox, brand-mozilla, icon names
-├── examples/                # complete pages: dashboard, one-pager
+├── examples/                # complete pages and a sample Markdown report
 └── scripts/
     ├── bundle.py            # inline CSS and expand icon/logo placeholders
     ├── check.py             # lint a page against the design system rules
     ├── icon.py              # list, print, or vendor Acorn icons
+    ├── render_markdown.py   # Markdown to bundled HTML (requires Pandoc)
+    ├── build_demo.py        # portable theme/layout comparison gallery
+    ├── test_render_markdown.py # Markdown adapter integration tests
     └── build_tokens.py      # regenerate tokens.css from mozilla-firefox/firefox
 ```
 
-The scripts need only the Python 3 standard library.
+The original HTML scripts need only the Python 3 standard library.
+
+### Render Markdown
+
+The optional Markdown adapter additionally needs Pandoc in PATH:
+
+```sh
+python3 -I plugins/mozilla-design-system/skills/mozilla-html/scripts/render_markdown.py report.md --theme acorn --layout sidebar -o report.html
+python3 -I plugins/mozilla-design-system/skills/mozilla-html/scripts/build_demo.py --output /tmp/mozilla-demo
+```
+
+The adapter preserves the document's content and adds the selected theme,
+layout, section navigation, and table styles. It embeds local images and runs
+the existing bundler and checker. Options and supported Markdown patterns are
+documented in `skills/mozilla-html/references/markdown.md`. Open the demo's
+`index.html` to compare nine layouts/themes and three component samplers.
 
 ## Keeping it current
 
